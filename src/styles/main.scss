@@ -1,12 +1,23 @@
-$text: #27300f;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green: #27300f;
 $orange: #d26a22;
 $white: #ffffff;
+$font-jost:'Jost', sans-serif;
+$font-cormorant: 'Cormorant', serif;
 
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    font-family: $font-jost;
+    color: $green;
+}
 .header {
     max-width: 1440px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,42 +26,45 @@ $white: #ffffff;
         list-style-type: none;
         margin: 0;
         padding-left: 0;
-        gap: 36px;
+        gap: 3.6rem;
     }
     &__link {
-        font-size: 16px;
-        color: $text;
+        color: $green;
         text-decoration: none;
         &:hover {
             color: $orange;
         }
     }
     &__tel {
-        font-size: 16px;
-        color: $text;
+        color: $green;
         text-decoration: none;
+        font-weight: 500;
         &:hover {
             color: $orange;
         }
     }
     &__cart {
         background-color: $orange;
-        width: 40px;
-        height: 40px;
+        width: 3.8rem;
+        height: 3.8rem;
         border-radius: 100%;
         background-image: url(../images/cart.svg);
-        background-size: 17px 15px;
+        background-size: 1.7rem 1.5rem;
         background-repeat: no-repeat;
         background-position: center center;
         position: relative;
-        border: none;
+        border: 1px solid $orange;
+        &:hover {
+            background-color: $green;
+            border: 1px solid $green;
+        }
     }
     &__counter {
-        font-size: 8px;
+        font-size: .8rem;
         color: $white;
         position: absolute;
-        right: 6px;
-        top: 6px;
+        right: .6rem;
+        top: .6rem;
     }
 }
 .logo {
@@ -58,6 +72,57 @@ $white: #ffffff;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 32px;
+    width: 12.2rem;
+    height: 3.2rem;
 }
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main {
+    background-image: url(../images/main.png);
+    background-size: cover;
+    background-position-x: center;
+    &__item {
+        margin-left: 12rem;
+        max-width: 372px;
+        margin-top: 6rem;
+    }
+    &__link {
+        margin-top: 6rem;
+    }
+}
+.title {
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    margin: 0;
+    &__span {
+        font-style: italic;
+    }
+    &_block {
+        .title__span {
+            display: block;
+        }
+    }
+}
+.description {
+    margin: 0;
+    &_size-s {
+        font-size: 1.8rem;
+    }
+}
+.link {
+    color: $white;
+    text-transform: uppercase;
+    padding: 2.5rem 4.5rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 3.25rem;
+    display: inline-block;
+}
+
+  
